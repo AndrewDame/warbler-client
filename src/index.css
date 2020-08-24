@@ -13,18 +13,10 @@ body{
   color: white;
 }
 
-.logout a {
-  color: black;
-}
-
 .navbar a:hover{
   color: white;
   text-decoration: underline;
   cursor: pointer;
-}
-
-.logout a:hover{
-  color: black;
 }
 
 .navbar-brand >img {
@@ -88,4 +80,10 @@ ul.nav li{
 a.btn.btn-danger,
 a.btn.btn-danger:hover{
   color: white;
+}
+
+
+.username{
+  font-weight: 600;
+  font-size: 18px;
 }

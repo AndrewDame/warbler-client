@@ -10,9 +10,9 @@ class MessageForm extends Component {
     }
   }
 
-  handleNewMessage = event => {
+  handleNewMessage = async (event) => {
     event.preventDefault();
-    this.props.postNewMessage(this.state.message);
+    await this.props.postNewMessage(this.state.message);
     this.setState({message: ""});
     this.props.history.push("/");
 
@@ -30,9 +30,8 @@ class MessageForm extends Component {
           type="text"
           className="form-control"
           value={this.state.message}
-          onChange={e => this.setState({message: e.target.value})}
-          />
-        <button type="submit" className="btn btn-success pull-right">
+          onChange={e => this.setState({message: e.target.value})}/>
+        <button type="submit" className="btn btn-success pull-right" style={{ marginTop: "10px"}}>
           Add My Message!
         </button>
       </form>
